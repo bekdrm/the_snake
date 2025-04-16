@@ -55,13 +55,13 @@ class GameObject:
 class Apple(GameObject):
     """Класс, представляющий яблоко в игре."""
 
-    def __init__(self, body_color=APPLE_COLOR, ocuppied=[]):
+    def __init__(self, body_color=APPLE_COLOR, ocuppied=None):
         """
         Инициализирует яблоко с определенным цветом
         и случайной позицией.
         """
         super().__init__(body_color=body_color)
-        self.randomize_position(ocuppied)
+        self.randomize_position(ocuppied or [])
 
     def randomize_position(self, ocuppied):
         """
